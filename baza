@@ -1,0 +1,62 @@
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>SASP taryfikator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/slider.css">
+    <link rel="stylesheet" href="public/css/dark.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <img src="public/img/logo.png" alt="Logo SASP">
+        <h2 class="topText">SASP - Tablet
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Kategorie
+            </button>
+            <form class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <label class="dropdown-item"><input class="catChkBox" type="checkbox" name="" value="0" checked> Przestępstwa przeciwko porządkowi publicznemu i moralności</label>
+              <label class="dropdown-item"><input class="catChkBox" type="checkbox" name="" value="1" checked> Przestępstwa dotyczące broni, narkotyków i amunicji</label>
+              <label class="dropdown-item"><input class="catChkBox" type="checkbox" name="" value="2" checked> Grupy Przestępcze</label>
+              <label class="dropdown-item"><input class="catChkBox" type="checkbox" name="" value="3" checked> Napady</label>
+              <label class="dropdown-item"><input class="catChkBox" type="checkbox" name="" value="4" checked> Terroryzm</label>
+              <label class="dropdown-item"><input class="catChkBox" type="checkbox" name="" value="5" checked> Przestępstwa i zbrodnie przeciwko życiu i zdrowiu ludzkiemu oraz przeciwko mieniu</label>
+              <label class="dropdown-item"><input class="catChkBox" type="checkbox" name="" value="6" checked> Przestępstwa dyscyplinarne i przestępstwa w instytucjach państwowych</label>
+              <label class="dropdown-item"><input class="catChkBox" type="checkbox" name="" value="7" checked> Kodeks Drogowy</label>
+            </form>
+          </div>
+        </h2>
+        <h2 class="topText">
+          <a onclick="pokazListe()" id="list" class="bttn" href="#"></a>
+          <a onclick="cofnijOperacje()" id="undo" class="bttn" href="#"></a>
+          <a onclick="wyczysc()" id="clean" class="bttn" href="#"></a>
+        </h2>
+        <label class="switch">
+          <input id="darkModeCheckbox" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div id="ticketContainer">
+        <div id="ticket">
+          <canvas id="ticketCanvas">Nie działa</canvas>
+          <img id="ticketImg" src="public/img/ticket.png" style="display: none" alt="ticket image" />
+        </div>
+      </div>
+      <input type="text" id="nameInput" onkeyup="search()" placeholder="Wpisz nazwę do wyszukania" title="Podaj nazwę">
+      <div id="tableContainer">
+
+
+      </div>
+
+    </div>
+    <script src="public/js/index.js"></script>
+    <script src="public/js/darkMode.js"></script>
+  </body>
+</html>
